@@ -93,8 +93,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!./../../node_modules/css-loader/index.js!./introComponent.css", function() {
-			var newContent = require("!!./../../node_modules/css-loader/index.js!./introComponent.css");
+		module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js!./introComponent.scss", function() {
+			var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js!./introComponent.scss");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -112,7 +112,7 @@ exports = module.exports = __webpack_require__(3)();
 
 
 // module
-exports.push([module.i, ".intro-component {\n    padding: 20px;\n    background: maroon;\n    color: #fff;\n    font-family: arial;\n}\n", ""]);
+exports.push([module.i, ".intro-component {\n  padding: 20px;\n  background: #7777bb;\n  color: #fff;\n  font-family: arial; }\n  .intro-component h1 {\n    text-transform: uppercase; }\n", ""]);
 
 // exports
 
